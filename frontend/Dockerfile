@@ -1,0 +1,2 @@
+FROM nginx:1.13.3-alpine
+CMD ["bash", "-c", "env >/usr/share/nginx/html/env.txt ; nginx -g 'daemon off;'"]

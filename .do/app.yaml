@@ -1,8 +1,8 @@
 name: sample-dockerfile
 services:
-- dockerfile_path: Dockerfile
+- dockerfile_path: frontend/Dockerfile
   github:
     branch: main
     deploy_on_push: true
-    repo: digitalocean/sample-dockerfile
+    repo: sciabarrado/sample-dockerfile
   name: sample-dockerfile

@@ -1,8 +1,8 @@
 spec:
   name: sample-dockerfile
   services:
-  - dockerfile_path: Dockerfile
+  - dockerfile_path: frontend/Dockerfile
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-dockerfile.git
+      repo_clone_url: https://github.com/sciabarrado/sample-dockerfile.git
     name: sample-dockerfile
