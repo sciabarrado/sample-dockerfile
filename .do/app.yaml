@@ -1,8 +1,10 @@
 name: sample-dockerfile
 services:
-- dockerfile_path: frontend/
+- name: sample-dockerfile
+  source_dir: frontend
+  dockerfile_path: frontend/Dockerfile
   github:
     branch: main
     deploy_on_push: true
     repo: sciabarrado/sample-dockerfile
-  name: sample-dockerfile
+  
