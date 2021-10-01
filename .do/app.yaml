@@ -1,6 +1,6 @@
 name: sample-dockerfile
 services:
-- dockerfile_path: frontend/Dockerfile
+- dockerfile_path: frontend/
   github:
     branch: main
     deploy_on_push: true

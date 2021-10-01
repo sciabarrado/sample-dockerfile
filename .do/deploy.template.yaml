@@ -1,7 +1,7 @@
 spec:
   name: sample-dockerfile
   services:
-  - dockerfile_path: frontend/Dockerfile
+  - dockerfile_path: frontend/
     git:
       branch: main
       repo_clone_url: https://github.com/sciabarrado/sample-dockerfile.git
