@@ -1,10 +1,25 @@
 name: sample-dockerfile
 services:
-- name: sample-dockerfile
+- name: backend
+  source_dir: backend
+  dockerfile_path: backend/Dockerfile
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: sciabarrado/sample-dockerfile
+  routes:
+  - path: /backend
+- name: frontend
   source_dir: frontend
   dockerfile_path: frontend/Dockerfile
   github:
     branch: main
     deploy_on_push: true
     repo: sciabarrado/sample-dockerfile
-  
+  envs:
+     - key: BACKEND_URL
+       scope: RUN_TIME
+       value: ${backend.PRIVATE_URL}
+  routes:
+  - path: /
+

@@ -1,2 +1,3 @@
 FROM nginx:1.13.3-alpine
-CMD ["/bin/sh", "-c", "env >/usr/share/nginx/html/env.txt ; nginx -g 'daemon off;'"]
+COPY default.conf /etc/default.conf
+CMD ["/bin/sh", "-c", "envsubst '$BACKEND_URL' </etc/default.conf >/etc/nginx/conf.d/default.conf ; nginx -g 'daemon off;'"]
